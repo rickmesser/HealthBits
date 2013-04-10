@@ -1,0 +1,18 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Sputnik Creative -- Design & Development -- @sputnikco
+
+# THANKS
+
+    Paul Irish & HTML5 Boilerplate
+    @mdo & @fat for the glory of Twitter Bootstrap
+    @monkeydobiz for HTML5 Reset
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    jQuery, Modernizr
+    CodeKit
