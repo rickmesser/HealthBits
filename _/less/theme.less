@@ -4,20 +4,60 @@
 
 //
 // Theme Variables
-// --------------------------------------------------
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+@transLength: .1s;
 
-// Brand Colors
-// -------------------------
-@brandBlue:             #00b3e6;
+//
+// Theme Fonts
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-// Accent colors
-// -------------------------
-@faintBlue:        #ebf2f8;
 
-body {
-	background: @faintBlue;
-	font-family: 'Noto Sans';
+// Egizio Regular ~~~~~
+@font-face {
+    font-family: 'egizio_urwregular';
+    src: url('../fonts/egizio-urw-webfont.eot');
+    src: url('../fonts/egizio-urw-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/egizio-urw-webfont.woff') format('woff'),
+         url('../fonts/egizio-urw-webfont.ttf') format('truetype'),
+         url('../fonts/egizio-urw-webfont.svg#egizio_urwregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
+// Egizio Bold ~~~~~
+@font-face {
+    font-family: 'egizio_urwbold';
+    src: url('../fonts/egizio-urw-bold-webfont.eot');
+    src: url('../fonts/egizio-urw-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/egizio-urw-bold-webfont.woff') format('woff'),
+         url('../fonts/egizio-urw-bold-webfont.ttf') format('truetype'),
+         url('../fonts/egizio-urw-bold-webfont.svg#egizio_urwbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+// Egizio Italic ~~~~~
+@font-face {
+    font-family: 'egizio_urwregular_italic';
+    src: url('../fonts/egizio-urw-regular-italic-webfont.eot');
+    src: url('../fonts/egizio-urw-regular-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/egizio-urw-regular-italic-webfont.woff') format('woff'),
+         url('../fonts/egizio-urw-regular-italic-webfont.ttf') format('truetype'),
+         url('../fonts/egizio-urw-regular-italic-webfont.svg#egizio_urwregular_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+// Egizio Bold Italic ~~~~~
+@font-face {
+    font-family: 'egizio_urwbold_italic';
+    src: url('../fonts/egizio-urw-bold-italic-webfont.eot');
+    src: url('../fonts/egizio-urw-bold-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/egizio-urw-bold-italic-webfont.woff') format('woff'),
+         url('../fonts/egizio-urw-bold-italic-webfont.ttf') format('truetype'),
+         url('../fonts/egizio-urw-bold-italic-webfont.svg#egizio_urwbold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 .text-center {
 	text-align: center;
 }
