@@ -14,6 +14,7 @@
   // Fix for IE7's bad z-indexing so dropdowns don't appear below content that follows the navbar
   *position: relative;
   *z-index: 2;
+  font-family: @headingsFontFamily;
 }
 
 // Inner for background effects
@@ -50,15 +51,27 @@
 .navbar .brand {
   float: left;
   display: block;
+  background: url("@{imgPath}/logo@2x.png") no-repeat;
+  background-size: 202px 36px;
   // Vertically center the text given @navbarHeight
-  padding: ((@navbarHeight - @baseLineHeight) / 2) 20px ((@navbarHeight - @baseLineHeight) / 2);
-  margin-left: -20px; // negative indent to left-align the text down the page
+  // padding: ((@navbarHeight - @baseLineHeight) / 2) 20px ((@navbarHeight - @baseLineHeight) / 2);
+  // margin-top: 13px;
+  // margin-left: -20px; // negative indent to left-align the text down the page
   font-size: 20px;
   font-weight: 200;
   color: @navbarBrandColor;
   // text-shadow: 0 1px 0 @navbarBackgroundHighlight;
+  // position: relative;
+  // top: 13px;
+  // left: 0;
+  margin: ((@navbarHeight - 36) / 2) 0 ((@navbarHeight - 36) / 2);
+  text-indent: -9999px;
+  height: 36px;
+  width: 202px;
+  .transition(opacity @transLength linear);
   &:hover {
     text-decoration: none;
+    .opacity(50);
   }
 }
 
@@ -84,8 +97,8 @@
 .navbar .divider-vertical {
   height: @navbarHeight;
   margin: 0 9px;
-  border-left: 1px solid @navbarBackground;
-  border-right: 1px solid @navbarBackgroundHighlight;
+  border-left: 1px solid darken(@brandBlue, 5%);
+  border-right: 1px solid lighten(@brandBlue, 5%);
 }
 
 // Buttons in navbar

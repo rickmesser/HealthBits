@@ -6,6 +6,7 @@
 // Theme Variables
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 @transLength: .1s;
+@imgPath: "../img";
 
 //
 // Theme Fonts
@@ -57,10 +58,42 @@
     font-style: normal;
 }
 
+//
+// Theme Classes
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 .text-center {
-	text-align: center;
+    text-align: center;
 }
+.jumbotron {
+    position: relative;
+    padding: (@navbarHeight) * 1.5 0;
+}
+.inverse {
+    background: @brandBlue;
+    color: @darkBlue;
+    h1, h2 { color: @ltBlue;}
+}
+.subhead {
+    .text-center;
+}
+
 img.splash {
 	margin-top: 10em;
+}
+.landmark {
+    // .img-circle;
+    // background: @medBlue;
+    // padding: 20px 10px;
+    // color: @ltBlue;
+}
+
+@media (max-width: 767px) {
+    .jumbotron {
+        padding: (@navbarHeight) 0;
+    }
+    .jumbotron.subhead {
+        padding-top: (@navbarHeight - 60);
+    }
 }

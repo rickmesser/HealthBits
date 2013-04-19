@@ -27,47 +27,85 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.brand{:href => "#"} Health Bits
+          %a.brand{:href => "#"} HealthBits
           .nav-collapse.collapse
             %ul.nav.pull-right
               %li
-                %a{:href => "#about"} Link 1
+                %a{:href => "#about"} About
               %li
-                %a{:href => "#contact"} Link 2
-              %li.divider-vertical
-              %li.dropdown
-                %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-                  Dropdown
-                  %b.caret
-                %ul.dropdown-menu
-                  %li
-                    %a{:href => "#"} Sub link 1
-                  %li
-                    %a{:href => "#"} Sub link 2
-                  %li
-                    %a{:href => "#"} Sub link 3
-                  %li.divider
-                  %li
-                    %a{:href => "#"} Separated link 1
-                  %li.divider
-                  %li
-                    %a{:href => "#"} Separated link 2
-          / /.nav-collapse
-    .container
-      .row
-        .span4
-          %h2 Information is Healthy
-          %a.btn{:href => "#"} Button Style
-        .span8
-          %h1 This is an Example of a Header, HealthBits is the Best.
-          %p 
-            :markdown
-              Lorem ipsum [dolor](https://www.google.com/) sit amet, consectetur adipiscing elit. Etiam et magna lacus. Aliquam laoreet luctus porttitor. Donec eu velit eu velit sodales ornare sit amet in felis. 
-          %h2 Header Two
-          %p 
-            :markdown
-              Lorem ipsum [dolor](https://www.google.com/) sit amet, consectetur adipiscing elit. Etiam et magna lacus. Aliquam laoreet luctus porttitor. Donec eu velit eu velit sodales ornare sit amet in felis. 
-    
+                %a{:href => "#contact"} FAQ
+              %li
+                %a{:href => "#contact"} Contact
+    %section.jumbotron.subhead
+      .container
+        %article
+          %h1 
+            Seemless data integration for connected 
+            %br
+            and comprehensive care.
+          %hr
+          %h2
+            With all of our advancements in technology and training, the healthcare industry isn’t getting any closer to being healed.
+    %section.jumbotron.inverse
+      .container
+        .row
+          %aside.span2.sidebar.hidden-phone
+            %ul
+              %li
+                %a{:href => "#"} The Landscape
+              %li
+                %a{:href => "#"} Our Wallets
+              %li
+                %a{:href => "#"} Our Lives
+              %li
+                %a{:href => "#"} Medical Errors
+              %li
+                %a{:href => "#"} An Opportunity
+          .span2
+            %aside.landmark
+              %img{:src => "_/img/lm-system_sick@2x.png"}/
+          .span8
+            %article
+              %h1 The System is Sick.
+              %p The Healthcare system in the United States is one of the least efficient in the world, creating an enormous and expensive problem for millions of Americans.
+              %p At Healthbits, we believe many of the issues plauging our country can be solved by harnessing the power of data to increase the efficiency and reliability of care delivered to patients. The healthcare system’s ailments might affect you more than you think.
+    %section.jumbotron
+      .container
+        .row
+          .span2.offset2
+            %aside.landmark
+              %img{:src => "_/img/lm-system_sick@2x.png"}/
+          .span8
+            %article
+              %h1 We’re spending more than ever.
+              %p On average, our country spends 3 times more per person on healthcare than other developed countries. 
+    %section.jumbotron.inverse
+      .container
+        .row
+          .span2.offset2
+            %aside.landmark
+              %img{:src => "_/img/lm-system_sick@2x.png"}/
+          .span8
+            %article
+              %h1 We’re dying younger.
+              %p Even with all that we spend on healthcare, we as a country we rank lower than ever on in overall life expectancy.
+    %section.jumbotron
+      .container
+        .row
+          .span2.offset2
+            %aside.landmark
+              %img{:src => "_/img/lm-system_sick@2x.png"}/
+          .span8
+            %article
+              %h1 We have an opportunity to change this.
+              %p Healthbits harnesses the the information availableto ensure your in-hospital experience is safe and reliable. We believe information is healthy and is the best defense against unnecessary waste and unintended consequences.
+            %form.form-inline
+              %fieldset
+                %legend Coming soon to a hospital near you. Get Updates.
+                %input.input-small{:type => "text", :placeholder => "Name"}/
+                %input.input-small{:type => "text", :placeholder => "Email"}/
+                %button.btn{:type => "submit"} Submit
+
     / javascript
     %script{:src => "_/js/vendor/jquery-1.9.1.min.js"}
     %script{:src => "_/js/plugins.js"}

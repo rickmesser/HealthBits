@@ -61,14 +61,14 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-h1,
-h2,
-h3 { line-height: @baseLineHeight * 2; }
+h1 { line-height: @baseLineHeight * 1.5; }
+// h2 { line-height: @baseLineHeight * 2; }
+// h3 { line-height: @baseLineHeight * 2; }
 
-h1 { font-size: @baseFontSize * 2.75; } // ~38px
-h2 { font-size: @baseFontSize * 2.25; } // ~32px
-h3 { font-size: @baseFontSize * 1.75; } // ~24px
-h4 { font-size: @baseFontSize * 1.25; } // ~18px
+h1 { font-size: @baseFontSize * 2.25; } // ~36px
+h2 { font-size: @baseFontSize * 1.2; } // ~18px
+h3 { font-size: @baseFontSize * 1; } // ~16px
+h4 { font-size: @baseFontSize * 0.75; } // ~14px
 h5 { font-size: @baseFontSize; }
 h6 { font-size: @baseFontSize * 0.85; } // ~12px
 
@@ -161,9 +161,16 @@ dd {
 // Horizontal rules
 hr {
   margin: @baseLineHeight 0;
-  border: 0;
-  border-top: 1px solid @hrBorder;
-  border-bottom: 1px solid @white;
+  
+  border-style: solid;
+  border-width: 27px;
+  -moz-border-image: url("@{imgPath}/hb-border.png") 27 repeat;
+  -webkit-border-image: url("@{imgPath}/hb-border.png") 27 repeat;
+  -o-border-image: url("@{imgPath}/hb-border.png") 27 repeat;
+  border-image: url("@{imgPath}/hb-border.png") 27 repeat;
+
+  // 
+  // border-bottom: 1px solid @white;
 }
 
 // Abbreviations and acronyms

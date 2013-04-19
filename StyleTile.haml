@@ -8,40 +8,69 @@
     %link{:href => "humans.txt", :rel => "author"}/
     %link{:href => "_/css/main.css", :rel => "stylesheet"}/
     %link{:href => "_/css/responsive.css", :rel => "stylesheet"}/
-    %link{:href => "http://fonts.googleapis.com/css?family=Noto+Sans", :rel => "stylesheet", :type => "text/css"}/
+    %script{:src => "http://use.typekit.net/wle1fvu.js", :type => "text/javascript"}
+    :javascript
+      try{Typekit.load();}catch(e){}
     /[if lt IE 9]
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    %link{:href => "_/img/favicon.ico", :rel => "shortcut icon"}/
+    %link{:href => "_/img/apple-touch-icon-144x144-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "144x144"}/
+    %link{:href => "_/img/apple-touch-icon-114x114-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "114x114"}/
+    %link{:href => "_/img/apple-touch-icon-72x72-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "72x72"}/
+    %link{:href => "_/img/apple-touch-icon-57x57-precomposed.png", :rel => "apple-touch-icon-precomposed"}/
     
   %body
-    .navbar
+    %header.navbar.navbar-fixed-top{:role => "banner"}
       .navbar-inner
-        %a.brand{:href => "#"} Health Bits
-        .nav-collapse.collapse
-          %ul.nav.pull-right
-            %li
-              %a{:href => "#about"} Link 1
-            %li
-              %a{:href => "#contact"} Link 2
-            %li.divider-vertical
-            %li.dropdown
-              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-                Dropdown
-                %b.caret
-              %ul.dropdown-menu
-                %li
-                  %a{:href => "#"} Sub link 1
-                %li
-                  %a{:href => "#"} Sub link 2
-                %li
-                  %a{:href => "#"} Sub link 3
-                %li.divider
-                %li
-                  %a{:href => "#"} Separated link 1
-                %li.divider
-                %li
-                  %a{:href => "#"} Separated link 2
-        
-    .container.text-center
+        .container
+          %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.brand{:href => "#"} HealthBits
+          .nav-collapse.collapse
+            %ul.nav.pull-right
+              %li
+                %a{:href => "#about"} About
+              %li
+                %a{:href => "#contact"} FAQ
+              %li
+                %a{:href => "#contact"} Contact
+    .container
       .row
-        .span12
+        .span4
           %h2 Information is Healthy
+          %a.btn{:href => "#"} Button Style
+          
+        .span8
+          %h1 This is an Example of a Header, HealthBits is the Best.
+          %p 
+            :markdown
+              Lorem ipsum [dolor](https://www.google.com/) sit amet, consectetur adipiscing elit. Etiam et magna lacus. Aliquam laoreet luctus porttitor. Donec eu velit eu velit sodales ornare sit amet in felis. 
+          %h2 Header Two
+          %p 
+            :markdown
+              Lorem ipsum [dolor](https://www.google.com/) sit amet, consectetur adipiscing elit. Etiam et magna lacus. Aliquam laoreet luctus porttitor. Donec eu velit eu velit sodales ornare sit amet in felis. 
+          %form.form-inline
+            %fieldset
+              %legend Form
+              %input.input-small{:type => "text", :placeholder => "Name"}
+              %input.input-small{:type => "text", :placeholder => "Email"}
+              %button.btn{:type => "submit"} Submit
+    
+    / javascript
+    %script{:src => "_/js/vendor/jquery-1.9.1.min.js"}
+    %script{:src => "_/js/plugins.js"}
+    %script{:src => "_/js/bootstrap-transition.js"}
+    %script{:src => "_/js/bootstrap-alert.js"}
+    %script{:src => "_/js/bootstrap-modal.js"}
+    %script{:src => "_/js/bootstrap-dropdown.js"}
+    %script{:src => "_/js/bootstrap-scrollspy.js"}
+    %script{:src => "_/js/bootstrap-tab.js"}
+    %script{:src => "_/js/bootstrap-tooltip.js"}
+    %script{:src => "_/js/bootstrap-popover.js"}
+    %script{:src => "_/js/bootstrap-button.js"}
+    %script{:src => "_/js/bootstrap-collapse.js"}
+    %script{:src => "_/js/bootstrap-carousel.js"}
+    %script{:src => "_/js/bootstrap-typeahead.js"}
+    %script{:src => "_/js/main.js"}
