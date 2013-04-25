@@ -255,6 +255,8 @@
   padding: ((@navbarHeight - @baseLineHeight) / 2) 15px ((@navbarHeight - @baseLineHeight) / 2);
   color: @navbarLinkColor;
   text-decoration: none;
+  .transition(background-color @transLength ease);
+
   // text-shadow: 0 1px 0 @navbarBackgroundHighlight;
 }
 .navbar .nav .dropdown-toggle .caret {
@@ -266,7 +268,7 @@
 .navbar .nav > li > a:focus,
 .navbar .nav > li > a:hover {
   background-color: @navbarLinkBackgroundHover; // "transparent" is default to differentiate :hover from .active
-  color: @navbarLinkColorHover;
+  color: @navbarLinkColorHover; 
   text-decoration: none;
 }
 

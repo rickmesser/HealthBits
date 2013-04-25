@@ -112,6 +112,7 @@ ul.unstyled,
 ol.unstyled {
   margin-left: 0;
   list-style: none;
+  font-family: @headingsFontFamily;
 }
 
 // Single-line list items
@@ -161,13 +162,15 @@ dd {
 // Horizontal rules
 hr {
   margin: @baseLineHeight 0;
-  
-  border-style: solid;
-  border-width: 27px;
-  -moz-border-image: url("@{imgPath}/hb-border.png") 27 repeat;
-  -webkit-border-image: url("@{imgPath}/hb-border.png") 27 repeat;
-  -o-border-image: url("@{imgPath}/hb-border.png") 27 repeat;
-  border-image: url("@{imgPath}/hb-border.png") 27 repeat;
+  background: url("@{imgPath}/bits-horz.png") no-repeat center;
+  height: 12px;
+  background-size: 968px 12px;
+  border-style: none;
+  // border-width: 12px;
+  // -moz-border-image: url("@{imgPath}/bits-horz.png") 12 repeat;
+  // -webkit-border-image: url("@{imgPath}/bits-horz.png") 12 repeat;
+  // -o-border-image: url("@{imgPath}/bits-horz.png") 12 repeat;
+  // border-image: url("@{imgPath}/bits-horz.png") 12 repeat;
 
   // 
   // border-bottom: 1px solid @white;

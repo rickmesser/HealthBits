@@ -732,6 +732,7 @@ ul.unstyled,
 ol.unstyled {
   margin-left: 0;
   list-style: none;
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 ul.inline,
 ol.inline {
@@ -783,12 +784,10 @@ dd {
 }
 hr {
   margin: 23px 0;
-  border-style: solid;
-  border-width: 27px;
-  -moz-border-image: url("../img/hb-border.png") 27 repeat;
-  -webkit-border-image: url("../img/hb-border.png") 27 repeat;
-  -o-border-image: url("../img/hb-border.png") 27 repeat;
-  border-image: url("../img/hb-border.png") 27 repeat;
+  background: url("../img/bits-horz.png") no-repeat center;
+  height: 12px;
+  background-size: 968px 12px;
+  border-style: none;
 }
 abbr[title],
 abbr[data-original-title] {
@@ -3846,13 +3845,17 @@ input[type="submit"].btn.btn-mini {
   padding: 28.5px 15px 28.5px;
   color: #ebf2f8;
   text-decoration: none;
+  -webkit-transition: background-color 0.1s ease;
+  -moz-transition: background-color 0.1s ease;
+  -o-transition: background-color 0.1s ease;
+  transition: background-color 0.1s ease;
 }
 .navbar .nav .dropdown-toggle .caret {
   margin-top: 8px;
 }
 .navbar .nav > li > a:focus,
 .navbar .nav > li > a:hover {
-  background-color: transparent;
+  background-color: #0090b6;
   color: #ebf2f8;
   text-decoration: none;
 }

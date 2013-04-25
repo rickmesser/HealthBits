@@ -50,7 +50,7 @@
       .container
         .row
           %aside.span2.sidebar.hidden-phone
-            %ul
+            %ul.unstyled
               %li
                 %a{:href => "#"} The Landscape
               %li
@@ -97,14 +97,28 @@
               %img{:src => "_/img/lm-system_sick@2x.png"}/
           .span8
             %article
+              %h1 We’re dying younger.
+              %p Even with all that we spend on healthcare, we as a country we rank lower than ever on in overall life expectancy.
+    %section.jumbotron.inverse
+      .container
+        .row
+          .span2.offset2
+            %aside.landmark
+              %img{:src => "_/img/lm-system_sick@2x.png"}/
+          .span8
+            %article
               %h1 We have an opportunity to change this.
               %p Healthbits harnesses the the information availableto ensure your in-hospital experience is safe and reliable. We believe information is healthy and is the best defense against unnecessary waste and unintended consequences.
-            %form.form-inline
-              %fieldset
-                %legend Coming soon to a hospital near you. Get Updates.
-                %input.input-small{:type => "text", :placeholder => "Name"}/
-                %input.input-small{:type => "text", :placeholder => "Email"}/
-                %button.btn{:type => "submit"} Submit
+    %section.jumbotron.subhead
+      .container
+        %h1 Coming soon to a hospital near you.
+        %hr 
+        %form.form-inline
+          %fieldset
+            %legend Get Updates.
+            %input.input-small{:type => "text", :placeholder => "Name"}/
+            %input.input-small{:type => "text", :placeholder => "Email"}/
+            %button.btn{:type => "submit"} Submit
 
     / javascript
     %script{:src => "_/js/vendor/jquery-1.9.1.min.js"}
