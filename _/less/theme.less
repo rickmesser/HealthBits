@@ -86,10 +86,22 @@ img.splash {
 	margin-top: 10em;
 }
 .landmark {
-    // .img-circle;
-    // background: @medBlue;
-    // padding: 20px 10px;
-    // color: @ltBlue;
+    // img {max-width: 170px;}
+}
+aside {
+    font-family: @headingsFontFamily;
+    ul {
+        li {
+            a {
+                &:hover {
+                    text-decoration: none;
+                }
+                &:active {
+                    color: @darkBlue;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 767px) {
@@ -98,5 +110,9 @@ img.splash {
     }
     .jumbotron.subhead {
         padding-top: (@navbarHeight - 60);
+    }
+    .landmark {
+        img {max-width: 170px;};
+        .text-center;
     }
 }

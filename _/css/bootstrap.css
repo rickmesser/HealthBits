@@ -225,12 +225,27 @@ textarea {
 img.splash {
   margin-top: 10em;
 }
+aside {
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+aside ul li a:hover {
+  text-decoration: none;
+}
+aside ul li a:active {
+  color: #374a52;
+}
 @media (max-width: 767px) {
   .jumbotron {
     padding: 80px 0;
   }
   .jumbotron.subhead {
     padding-top: 20px;
+  }
+  .landmark {
+    text-align: center;
+  }
+  .landmark img {
+    max-width: 170px;
   }
 }
 .clearfix {
@@ -732,7 +747,6 @@ ul.unstyled,
 ol.unstyled {
   margin-left: 0;
   list-style: none;
-  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 ul.inline,
 ol.inline {
