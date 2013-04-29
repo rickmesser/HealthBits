@@ -62,6 +62,20 @@
 }
 
 //
+// HTML Elements
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+figure {
+    margin: (@navbarHeight) 0;
+}
+
+article {
+    p {
+        font-family: @altFontFamily;
+    }
+}
+
+//
 // Theme Classes
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -71,7 +85,7 @@
 }
 .jumbotron {
     position: relative;
-    padding: (@navbarHeight) * 1.5 0;
+    padding: (@navbarHeight * 2.5) 0 @navbarHeight;
 }
 .inverse {
     background: @brandBlue;
@@ -80,6 +94,9 @@
 }
 .subhead {
     .text-center;
+    .lead-in {
+        margin-top: @navbarHeight;
+    }
 }
 
 img.splash {
@@ -88,21 +105,17 @@ img.splash {
 .landmark {
     // img {max-width: 170px;}
 }
-aside {
-    font-family: @headingsFontFamily;
-    ul {
-        li {
-            a {
-                &:hover {
-                    text-decoration: none;
-                }
-                &:active {
-                    color: @darkBlue;
-                }
-            }
-        }
-    }
+.lead-in {
+    .text-center;
+    line-height: 1;
+    background:  url("@{imgPath}/lead_in@2x.png") no-repeat bottom center;
+    background-size: 100px 56px;
+    min-height: 58px;
+    padding: 0 10px 40px 10px;
+    width: 116px;
+    margin: 0 auto;
 }
+
 
 @media (max-width: 767px) {
     .jumbotron {

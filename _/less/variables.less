@@ -53,16 +53,16 @@
 
 // Typography
 // -------------------------
-@sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+@sansFontFamily:        "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @serifFontFamily:       "egizio_urwregular", Georgia, "Times New Roman", Times, serif;
 @monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
 @baseFontSize:          16px;
-@baseFontFamily:        @serifFontFamily;
+@baseFontFamily:        @sansFontFamily;
 @baseLineHeight:        23px;
-@altFontFamily:         @sansFontFamily;
+@altFontFamily:         @serifFontFamily;
 
-@headingsFontFamily:    "proxima-nova", @sansFontFamily; // empty to use BS default, @baseFontFamily
+@headingsFontFamily:    @baseFontFamily; // empty to use BS default, @baseFontFamily
 @headingsFontWeight:    normal;    // instead of browser default, bold
 @headingsColor:         @darkBlue; // empty to use BS default, @textColor
 

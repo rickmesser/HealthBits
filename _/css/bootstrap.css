@@ -204,12 +204,18 @@ textarea {
   font-weight: normal;
   font-style: normal;
 }
+figure {
+  margin: 80px 0;
+}
+article p {
+  font-family: "egizio_urwregular", Georgia, "Times New Roman", Times, serif;
+}
 .text-center {
   text-align: center;
 }
 .jumbotron {
   position: relative;
-  padding: 120px 0;
+  padding: 200px 0 80px;
 }
 .inverse {
   background: #00b3e6;
@@ -222,17 +228,21 @@ textarea {
 .subhead {
   text-align: center;
 }
+.subhead .lead-in {
+  margin-top: 80px;
+}
 img.splash {
   margin-top: 10em;
 }
-aside {
-  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-aside ul li a:hover {
-  text-decoration: none;
-}
-aside ul li a:active {
-  color: #374a52;
+.lead-in {
+  text-align: center;
+  line-height: 1;
+  background: url("../img/lead_in@2x.png") no-repeat bottom center;
+  background-size: 100px 56px;
+  min-height: 58px;
+  padding: 0 10px 40px 10px;
+  width: 116px;
+  margin: 0 auto;
 }
 @media (max-width: 767px) {
   .jumbotron {
@@ -278,7 +288,7 @@ aside ul li a:active {
 body {
   margin: 0;
   padding-top: 80px;
-  font-family: "egizio_urwregular", Georgia, "Times New Roman", Times, serif;
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 23px;
   color: #76858c;
@@ -924,7 +934,6 @@ legend {
   margin-bottom: 23px;
   font-size: 24px;
   line-height: 46px;
-  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   border: 0;
   border-bottom: 1px solid #e5e5e5;
 }
@@ -2687,7 +2696,6 @@ button.close {
   *zoom: 1;
   padding: 6px 12px;
   margin-bottom: 0;
-  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 23px;
   text-align: center;
@@ -3778,7 +3786,7 @@ input[type="submit"].btn.btn-mini {
 .navbar-search .search-query {
   margin-bottom: 0;
   padding: 4px 14px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   font-weight: normal;
   line-height: 1;

@@ -20,7 +20,7 @@
     <link href="_/img/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
     <link href="_/img/apple-touch-icon-57x57-precomposed.png" rel="apple-touch-icon-precomposed">
   </head>
-  <body>
+  <body data-spy="scroll" data-target=".sidenav">
     <header class="navbar navbar-fixed-top" role="banner">
       <div class="navbar-inner">
         <div class="container">
@@ -36,7 +36,7 @@
                 <a href="#about">About</a>
               </li>
               <li>
-                <a href="#contact">FAQ</a>
+                <a href="#FAQ">FAQ</a>
               </li>
               <li>
                 <a href="#contact">Contact</a>
@@ -60,29 +60,34 @@
           </h2>
         </article>
       </div>
+      <div class="lead-in">
+        The
+        <br>
+        Landscape
+      </div>
     </section>
-    <section class="jumbotron inverse">
+    <section class="jumbotron inverse" id="landscape">
       <div class="container">
         <div class="row">
-          <aside class="span2 sidebar hidden-phone">
-            <ul class="unstyled">
+          <div class="span2 sidenav hidden-phone" data-offset-top="200" data-spy="affix" id="sidenav">
+            <ul class="nav affix">
               <li>
-                <a href="#">The Landscape</a>
+                <a href="#landscape">The Landscape</a>
               </li>
               <li>
-                <a href="#">Our Wallets</a>
+                <a href="#wallets">Our Wallets</a>
               </li>
               <li>
-                <a href="#">Our Lives</a>
+                <a href="#lives">Our Lives</a>
               </li>
               <li>
-                <a href="#">Medical Errors</a>
+                <a href="#errors">Medical Errors</a>
               </li>
               <li>
-                <a href="#">An Opportunity</a>
+                <a href="#opportunity">An Opportunity</a>
               </li>
             </ul>
-          </aside>
+          </div>
           <div class="span2">
             <aside class="landmark">
               <img src="_/img/lm-system_sick@2x.png">
@@ -93,13 +98,20 @@
               <h1>The System is Sick.</h1>
               <p>The Healthcare system in the United States is one of the least efficient in the world, creating an enormous and expensive problem for millions of Americans.</p>
               <p>At Healthbits, we believe many of the issues plauging our country can be solved by harnessing the power of data to increase the efficiency and reliability of care delivered to patients. The healthcare system’s ailments might affect you more than you think.</p>
-              <img src="_/img/illustration-us_healthcare@2x.png">
+              <figure class="illustration">
+                <img src="_/img/illustration-us_healthcare@2x.png">
+              </figure>
             </article>
           </div>
         </div>
       </div>
+      <div class="lead-in">
+        Our
+        <br>
+        Wallets
+      </div>
     </section>
-    <section class="jumbotron">
+    <section class="jumbotron" id="wallets">
       <div class="container">
         <div class="row">
           <div class="span2 offset2">
@@ -111,13 +123,20 @@
             <article>
               <h1>We’re spending more than ever.</h1>
               <p>On average, our country spends 3 times more per person on healthcare than other developed countries.</p>
-              <img src="_/img/illustration-spending@2x.png">
+              <figure class="illustration">
+                <img src="_/img/illustration-spending@2x.png">
+              </figure>
             </article>
           </div>
         </div>
       </div>
+      <div class="lead-in">
+        Our
+        <br>
+        Lives
+      </div>
     </section>
-    <section class="jumbotron inverse">
+    <section class="jumbotron inverse" id="lives">
       <div class="container">
         <div class="row">
           <div class="span2 offset2">
@@ -127,15 +146,22 @@
           </div>
           <div class="span8">
             <article>
-              <h1>We’re dying younger.</h1>
+              <h1>It’s a problem affecting our lives.</h1>
               <p>Even with all that we spend on healthcare, we as a country we rank lower than ever on in overall life expectancy.</p>
-              <img src="_/img/illustration-lifespan@2x.png">
+              <figure class="illustration">
+                <img src="_/img/illustration-lifespan@2x.png">
+              </figure>
             </article>
           </div>
         </div>
       </div>
+      <div class="lead-in">
+        Medical
+        <br>
+        Errors
+      </div>
     </section>
-    <section class="jumbotron">
+    <section class="jumbotron" id="errors">
       <div class="container">
         <div class="row">
           <div class="span2 offset2">
@@ -146,13 +172,18 @@
           <div class="span8">
             <article>
               <h1>We’re doing it to ourselves.</h1>
-              <p>Even with all that we spend on healthcare, we as a country we rank lower than ever on in overall life expectancy.</p>
+              <p>Each week there are 40 wrong site surgeries resulting in deaths and injuries caused by errors and oversights.</p>
             </article>
           </div>
         </div>
       </div>
+      <div class="lead-in">
+        An
+        <br>
+        Opportunity
+      </div>
     </section>
-    <section class="jumbotron inverse">
+    <section class="jumbotron inverse" id="opportunity">
       <div class="container">
         <div class="row">
           <div class="span2 offset2">
@@ -167,6 +198,11 @@
             </article>
           </div>
         </div>
+      </div>
+      <div class="lead-in">
+        Get
+        <br>
+        Updates
       </div>
     </section>
     <section class="jumbotron subhead">
@@ -198,6 +234,6 @@
     <script src="_/js/bootstrap-collapse.js"></script>
     <script src="_/js/bootstrap-carousel.js"></script>
     <script src="_/js/bootstrap-typeahead.js"></script>
-    <script src="_/js/main.js"></script>
+    <script src="_/js/main-ck.js"></script>
   </body>
 </html>

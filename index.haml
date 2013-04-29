@@ -19,7 +19,7 @@
     %link{:href => "_/img/apple-touch-icon-72x72-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "72x72"}/
     %link{:href => "_/img/apple-touch-icon-57x57-precomposed.png", :rel => "apple-touch-icon-precomposed"}/
     
-  %body
+  %body{"data-spy" => "scroll", "data-target" => ".sidenav" }
     %header.navbar.navbar-fixed-top{:role => "banner"}
       .navbar-inner
         .container
@@ -33,7 +33,7 @@
               %li
                 %a{:href => "#about"} About
               %li
-                %a{:href => "#contact"} FAQ
+                %a{:href => "#FAQ"} FAQ
               %li
                 %a{:href => "#contact"} Contact
     %section.jumbotron.subhead
@@ -46,21 +46,25 @@
           %hr
           %h2
             With all of our advancements in technology and training, the healthcare industry isn’t getting any closer to being healed.
-    %section.jumbotron.inverse
+      .lead-in
+        The
+        %br
+        Landscape
+    %section#landscape.jumbotron.inverse
       .container
         .row
-          %aside.span2.sidebar.hidden-phone
-            %ul.unstyled
+          #sidenav.span2.sidenav.hidden-phone{"data-spy" => "affix", "data-offset-top" => "200"}
+            %ul.nav.affix
               %li
-                %a{:href => "#"} The Landscape
+                %a{:href => "#landscape"} The Landscape
               %li
-                %a{:href => "#"} Our Wallets
+                %a{:href => "#wallets"} Our Wallets
               %li
-                %a{:href => "#"} Our Lives
+                %a{:href => "#lives"} Our Lives
               %li
-                %a{:href => "#"} Medical Errors
+                %a{:href => "#errors"} Medical Errors
               %li
-                %a{:href => "#"} An Opportunity
+                %a{:href => "#opportunity"} An Opportunity
           .span2
             %aside.landmark
               %img{:src => "_/img/lm-system_sick@2x.png"}/
@@ -69,8 +73,13 @@
               %h1 The System is Sick.
               %p The Healthcare system in the United States is one of the least efficient in the world, creating an enormous and expensive problem for millions of Americans.
               %p At Healthbits, we believe many of the issues plauging our country can be solved by harnessing the power of data to increase the efficiency and reliability of care delivered to patients. The healthcare system’s ailments might affect you more than you think.
-              %img{:src => "_/img/illustration-us_healthcare@2x.png"}/
-    %section.jumbotron
+              %figure.illustration
+                %img{:src => "_/img/illustration-us_healthcare@2x.png"}/
+      .lead-in
+        Our
+        %br
+        Wallets
+    %section#wallets.jumbotron
       .container
         .row
           .span2.offset2
@@ -80,8 +89,13 @@
             %article
               %h1 We’re spending more than ever.
               %p On average, our country spends 3 times more per person on healthcare than other developed countries.
-              %img{:src => "_/img/illustration-spending@2x.png"}/
-    %section.jumbotron.inverse
+              %figure.illustration
+                %img{:src => "_/img/illustration-spending@2x.png"}/
+      .lead-in
+        Our
+        %br
+        Lives
+    %section#lives.jumbotron.inverse
       .container
         .row
           .span2.offset2
@@ -89,10 +103,15 @@
               %img{:src => "_/img/lm-lifespan@2x.png"}/
           .span8
             %article
-              %h1 We’re dying younger.
+              %h1 It’s a problem affecting our lives.
               %p Even with all that we spend on healthcare, we as a country we rank lower than ever on in overall life expectancy.
-              %img{:src => "_/img/illustration-lifespan@2x.png"}/
-    %section.jumbotron
+              %figure.illustration
+                %img{:src => "_/img/illustration-lifespan@2x.png"}/
+      .lead-in
+        Medical
+        %br
+        Errors
+    %section#errors.jumbotron
       .container
         .row
           .span2.offset2
@@ -101,8 +120,12 @@
           .span8
             %article
               %h1 We’re doing it to ourselves.
-              %p Even with all that we spend on healthcare, we as a country we rank lower than ever on in overall life expectancy.
-    %section.jumbotron.inverse
+              %p Each week there are 40 wrong site surgeries resulting in deaths and injuries caused by errors and oversights.
+      .lead-in
+        An
+        %br
+        Opportunity
+    %section#opportunity.jumbotron.inverse
       .container
         .row
           .span2.offset2
@@ -112,6 +135,10 @@
             %article
               %h1 We have an opportunity to change this.
               %p Healthbits harnesses the the information availableto ensure your in-hospital experience is safe and reliable. We believe information is healthy and is the best defense against unnecessary waste and unintended consequences.
+      .lead-in
+        Get
+        %br
+        Updates
     %section.jumbotron.subhead
       .container
         %h1 Coming soon to a hospital near you.
@@ -138,4 +165,4 @@
     %script{:src => "_/js/bootstrap-collapse.js"}
     %script{:src => "_/js/bootstrap-carousel.js"}
     %script{:src => "_/js/bootstrap-typeahead.js"}
-    %script{:src => "_/js/main.js"}
+    %script{:src => "_/js/main-ck.js"}
