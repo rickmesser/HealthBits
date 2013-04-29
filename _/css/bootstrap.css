@@ -234,6 +234,9 @@ article p {
 img.splash {
   margin-top: 10em;
 }
+img.hospital {
+  max-width: 138px;
+}
 .lead-in {
   text-align: center;
   line-height: 1;
@@ -243,6 +246,12 @@ img.splash {
   padding: 0 10px 40px 10px;
   width: 116px;
   margin: 0 auto;
+}
+.sidenav {
+  background: red;
+}
+#sidenav {
+  position: relative;
 }
 @media (max-width: 767px) {
   .jumbotron {
@@ -5127,6 +5136,9 @@ a.badge:hover {
 }
 .pull-left {
   float: left;
+}
+.pull-center {
+  margin: 0 auto;
 }
 .hide {
   display: none;

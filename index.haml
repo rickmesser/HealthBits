@@ -9,10 +9,10 @@
     %link{:href => "_/css/main.css", :rel => "stylesheet"}/
     %link{:href => "_/css/responsive.css", :rel => "stylesheet"}/
     %script{:src => "http://use.typekit.net/wle1fvu.js", :type => "text/javascript"}
-    :javascript
-      try{Typekit.load();}catch(e){}
+    / :javascript
+    /   try{Typekit.load();}catch(e){}
     /[if lt IE 9]
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    / <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     %link{:href => "_/img/favicon.ico", :rel => "shortcut icon"}/
     %link{:href => "_/img/apple-touch-icon-144x144-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "144x144"}/
     %link{:href => "_/img/apple-touch-icon-114x114-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "114x114"}/
@@ -53,8 +53,8 @@
     %section#landscape.jumbotron.inverse
       .container
         .row
-          #sidenav.span2.sidenav.hidden-phone{"data-spy" => "affix", "data-offset-top" => "200"}
-            %ul.nav.affix
+          .span2  
+            %ul#sidenav.nav.hidden-phone{"data-spy" => "affix", "data-offset-top" => "200"}
               %li
                 %a{:href => "#landscape"} The Landscape
               %li
@@ -120,7 +120,13 @@
           .span8
             %article
               %h1 We’re doing it to ourselves.
-              %p Each week there are 40 wrong site surgeries resulting in deaths and injuries caused by errors and oversights.
+              %p Each week there are 40 wrong site surgeries resulting in deaths and injuries caused by errors and oversights. Adding up to 187,000 deaths per year, medical mistakes are the third leading cause of death in the country.
+              %h2 Leading Causes of Death in the U.S.
+              %ol
+                %li Heart disease: 597,689
+                %li Cancer: 574,743
+                %li Medical Errors: 187,000
+
       .lead-in
         An
         %br
@@ -135,6 +141,8 @@
             %article
               %h1 We have an opportunity to change this.
               %p Healthbits harnesses the the information availableto ensure your in-hospital experience is safe and reliable. We believe information is healthy and is the best defense against unnecessary waste and unintended consequences.
+              %figure.illustration
+                %img{:src => "_/img/illustration-opportunity@2x.png"}/
       .lead-in
         Get
         %br
@@ -142,6 +150,8 @@
     %section.jumbotron.subhead
       .container
         %h1 Coming soon to a hospital near you.
+        %figure.illustration
+          %img.hospital{:src => "_/img/hospital@2x.png"}/
         %hr 
         %form.form-inline
           %fieldset
@@ -155,6 +165,7 @@
     %script{:src => "_/js/plugins.js"}
     %script{:src => "_/js/bootstrap-transition.js"}
     %script{:src => "_/js/bootstrap-alert.js"}
+    %script{:src => "_/js/bootstrap-affix.js"}
     %script{:src => "_/js/bootstrap-modal.js"}
     %script{:src => "_/js/bootstrap-dropdown.js"}
     %script{:src => "_/js/bootstrap-scrollspy.js"}
