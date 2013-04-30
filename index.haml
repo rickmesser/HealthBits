@@ -19,7 +19,7 @@
     %link{:href => "_/img/apple-touch-icon-72x72-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "72x72"}/
     %link{:href => "_/img/apple-touch-icon-57x57-precomposed.png", :rel => "apple-touch-icon-precomposed"}/
     
-  %body{"data-spy" => "scroll", "data-target" => "#sidenav" }
+  %body{ "data-offset" => "200", "data-spy" => "scroll", "data-target" => "#sidenav"}
     %header.navbar.navbar-fixed-top{:role => "banner"}
       .navbar-inner
         .container
@@ -36,7 +36,7 @@
                 %a{:href => "#FAQ"} FAQ
               %li
                 %a{:href => "#contact"} Contact
-    %section.jumbotron.subhead.intro
+    .jumbotron.subhead.intro
       .container
         %article
           %h1 
@@ -50,11 +50,11 @@
         The
         %br
         Landscape
-    %section#landscape.jumbotron.inverse
+    #landscape.jumbotron.inverse
       .container
         .row
           .span2
-            %ul.hidden-phone.nav.sidenav#sidenav{"data-offset-top" => "830", "data-spy" => "affix"}
+            %ul.hidden-phone.nav.sidenav#sidenav{"data-spy" => "affix"}
               %li
                 %a{:href => "#landscape"} The Landscape
               %li
@@ -79,7 +79,7 @@
         Our
         %br
         Wallets
-    %section#wallets.jumbotron
+    #wallets.jumbotron
       .container
         .row
           .span2.offset2
@@ -95,7 +95,7 @@
         Our
         %br
         Lives
-    %section#lives.jumbotron.inverse
+    #lives.jumbotron.inverse
       .container
         .row
           .span2.offset2
@@ -111,7 +111,7 @@
         Medical
         %br
         Errors
-    %section#errors.jumbotron
+    #errors.jumbotron
       .container
         .row
           .span2.offset2
@@ -121,17 +121,19 @@
             %article
               %h1 We’re doing it to ourselves.
               %p Each week there are 40 wrong site surgeries resulting in deaths and injuries caused by errors and oversights. Adding up to 187,000 deaths per year, medical mistakes are the third leading cause of death in the country.
-              %h2 Leading Causes of Death in the U.S.
-              %ol
-                %li Heart disease: 597,689
-                %li Cancer: 574,743
-                %li Medical Errors: 187,000
+              %figure.illustration
+                %img{:src => "_/img/illustration-errors@2x.png"}/
+              / %h2 Leading Causes of Death in the U.S.
+              / %ol
+              /   %li Heart disease: 597,689
+              /   %li Cancer: 574,743
+              /   %li Medical Errors: 187,000
 
       .lead-in
         An
         %br
         Opportunity
-    %section#opportunity.jumbotron.inverse
+    #opportunity.jumbotron.inverse
       .container
         .row
           .span2.offset2
@@ -147,7 +149,7 @@
         Get
         %br
         Updates
-    %section.jumbotron.subhead.outro
+    .jumbotron.subhead.outro
       .container
         %h1 Coming soon to a hospital near you.
         %figure.illustration

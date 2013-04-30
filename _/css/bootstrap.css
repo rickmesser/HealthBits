@@ -237,6 +237,11 @@ img.splash {
 img.hospital {
   max-width: 138px;
 }
+.jumbotron .container .row {
+  background: url("../img/Dots-Vert.png") no-repeat;
+  background-position: 243px 192px;
+  background-size: 12px 441px;
+}
 .lead-in {
   text-align: center;
   line-height: 1;
@@ -264,6 +269,10 @@ img.hospital {
 .sidenav a {
   color: rgba(0, 0, 0, 0.4);
 }
+.sidenav li {
+  line-height: 1;
+  margin-bottom: 13px;
+}
 .sidenav li.active a {
   color: black;
 }
@@ -275,6 +284,9 @@ img.hospital {
   .sidenav {
     width: 170px;
   }
+  .jumbotron .container .row {
+    background-position: 309px 224px;
+  }
 }
 @media (min-width: 768px) and (max-width: 979px) {
   .sidenav {
@@ -282,6 +294,9 @@ img.hospital {
   }
   .sidenav.affix {
     top: 50px;
+  }
+  .jumbotron .container .row {
+    background-position: 190px 147px;
   }
 }
 @media (max-width: 767px) {
@@ -296,6 +311,9 @@ img.hospital {
   }
   .landmark img {
     max-width: 170px;
+  }
+  .jumbotron .container .row {
+    background: none;
   }
 }
 .clearfix {

@@ -1,7 +1,4 @@
 //
-// hi
-// ~~~~~~~~~~~
-//
 // Theme Specific Styles
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -103,8 +100,11 @@ img.splash {
 	margin-top: 10em;
 }
 img.hospital {max-width: 138px;}
-.landmark {
-    // img {max-width: 170px;}
+
+.jumbotron .container .row {
+  background: url("@{imgPath}/Dots-Vert.png") no-repeat;
+  background-position: (@gridColumnWidth * 3 + @gridGutterWidth * 3.15) (@gridColumnWidth * 3.2);
+  background-size: 12px 441px;
 }
 .lead-in {
   .text-center;
@@ -131,9 +131,14 @@ img.hospital {max-width: 138px;}
     color: @transBlk;
   }
 }
+.sidenav li {
+  line-height: 1;
+  margin-bottom: 13px;
+}
 .sidenav li.active a {
   color: black;
 }
+
 .sidenav.affix {
   top: 120px;
   z-index: 10;
@@ -148,6 +153,9 @@ img.hospital {max-width: 138px;}
   .sidenav {
       width: (@gridColumnWidth1200 * 2 + @gridGutterWidth1200);
     }
+  .jumbotron .container .row {
+    background-position: (@gridColumnWidth1200 * 3 + @gridGutterWidth1200 * 3.3) (@gridColumnWidth1200 * 3.2);
+  }
 }
 
 
@@ -158,17 +166,24 @@ img.hospital {max-width: 138px;}
   .sidenav.affix {
     top: 50px;
   }
+  .jumbotron .container .row {
+    background-position: (@gridColumnWidth768 * 3 + @gridGutterWidth768 * 3.2) (@gridColumnWidth768 * 3.5);
+  }
 }
 
 @media (max-width: 767px) {
-    .jumbotron {
-      padding: (@navbarHeight) 0;
-    }
-    .jumbotron.subhead {
-      padding-top: (@navbarHeight - 60);
-    }
-    .landmark {
-      img {max-width: 170px;};
-      .text-center;
-    }
+  .jumbotron {
+    padding: (@navbarHeight) 0;
+  }
+  .jumbotron.subhead {
+    padding-top: (@navbarHeight - 60);
+  }
+  .landmark {
+    img {max-width: 170px;};
+    .text-center;
+  }
+  .jumbotron .container .row {
+    background: none;
+  }
 }
+

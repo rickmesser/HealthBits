@@ -1,1 +1,1 @@
-$('[data-spy="scroll"]').each(function(){var e=$(this).scrollspy("refresh")});$("#sidenav").scrollspy();
+$("body").scrollspy();$('[data-spy="scroll"]').each(function(){var e=$(this).scrollspy("refresh")});
