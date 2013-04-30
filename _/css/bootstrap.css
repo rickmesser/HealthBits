@@ -247,11 +247,42 @@ img.hospital {
   width: 116px;
   margin: 0 auto;
 }
-.sidenav {
-  background: red;
-}
-#sidenav {
+.intro,
+.outro {
   position: relative;
+  z-index: 50;
+  background: #ebf2f8;
+}
+.sidenav {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 140px;
+  position: relative;
+  z-index: 10;
+}
+.sidenav a {
+  color: rgba(0, 0, 0, 0.4);
+}
+.sidenav li.active a {
+  color: black;
+}
+.sidenav.affix {
+  top: 120px;
+  z-index: 10;
+}
+@media (min-width: 1200px) {
+  .sidenav {
+    width: 170px;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  .sidenav {
+    width: 104px;
+  }
+  .sidenav.affix {
+    top: 50px;
+  }
 }
 @media (max-width: 767px) {
   .jumbotron {
@@ -3351,7 +3382,6 @@ input[type="submit"].btn.btn-mini {
 }
 .nav > li > a:hover {
   text-decoration: none;
-  background-color: #eeeeee;
 }
 .nav > li > a > img {
   max-width: none;

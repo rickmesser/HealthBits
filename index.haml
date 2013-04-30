@@ -9,17 +9,17 @@
     %link{:href => "_/css/main.css", :rel => "stylesheet"}/
     %link{:href => "_/css/responsive.css", :rel => "stylesheet"}/
     %script{:src => "http://use.typekit.net/wle1fvu.js", :type => "text/javascript"}
-    / :javascript
-    /   try{Typekit.load();}catch(e){}
+    :javascript
+      try{Typekit.load();}catch(e){}
     /[if lt IE 9]
-    / <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     %link{:href => "_/img/favicon.ico", :rel => "shortcut icon"}/
     %link{:href => "_/img/apple-touch-icon-144x144-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "144x144"}/
     %link{:href => "_/img/apple-touch-icon-114x114-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "114x114"}/
     %link{:href => "_/img/apple-touch-icon-72x72-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "72x72"}/
     %link{:href => "_/img/apple-touch-icon-57x57-precomposed.png", :rel => "apple-touch-icon-precomposed"}/
     
-  %body{"data-spy" => "scroll", "data-target" => ".sidenav" }
+  %body{"data-spy" => "scroll", "data-target" => "#sidenav" }
     %header.navbar.navbar-fixed-top{:role => "banner"}
       .navbar-inner
         .container
@@ -36,7 +36,7 @@
                 %a{:href => "#FAQ"} FAQ
               %li
                 %a{:href => "#contact"} Contact
-    %section.jumbotron.subhead
+    %section.jumbotron.subhead.intro
       .container
         %article
           %h1 
@@ -53,8 +53,8 @@
     %section#landscape.jumbotron.inverse
       .container
         .row
-          .span2  
-            %ul#sidenav.nav.hidden-phone{"data-spy" => "affix", "data-offset-top" => "200"}
+          .span2
+            %ul.hidden-phone.nav.sidenav#sidenav{"data-offset-top" => "830", "data-spy" => "affix"}
               %li
                 %a{:href => "#landscape"} The Landscape
               %li
@@ -147,7 +147,7 @@
         Get
         %br
         Updates
-    %section.jumbotron.subhead
+    %section.jumbotron.subhead.outro
       .container
         %h1 Coming soon to a hospital near you.
         %figure.illustration
@@ -176,4 +176,4 @@
     %script{:src => "_/js/bootstrap-collapse.js"}
     %script{:src => "_/js/bootstrap-carousel.js"}
     %script{:src => "_/js/bootstrap-typeahead.js"}
-    %script{:src => "_/js/main-ck.js"}
+    %script{:src => "_/js/main.js"}

@@ -107,34 +107,68 @@ img.hospital {max-width: 138px;}
     // img {max-width: 170px;}
 }
 .lead-in {
-    .text-center;
-    line-height: 1;
-    background:  url("@{imgPath}/lead_in@2x.png") no-repeat bottom center;
-    background-size: 100px 56px;
-    min-height: 58px;
-    padding: 0 10px 40px 10px;
-    width: 116px;
-    margin: 0 auto;
+  .text-center;
+  line-height: 1;
+  background:  url("@{imgPath}/lead_in@2x.png") no-repeat bottom center;
+  background-size: 100px 56px;
+  min-height: 58px;
+  padding: 0 10px 40px 10px;
+  width: 116px;
+  margin: 0 auto;
+}
+.intro, .outro {
+  position: relative;
+  z-index: 50;
+  background: @ltBlue;
+}
+.sidenav {
+  .box-sizing(border-box);
+  width: (@gridColumnWidth * 2 + @gridGutterWidth);
+  position: relative;
+  z-index: 10;
+  // .border-radius(6px);
+  a {
+    color: @transBlk;
+  }
+}
+.sidenav li.active a {
+  color: black;
+}
+.sidenav.affix {
+  top: 120px;
+  z-index: 10;
+  // background: red;
 }
 
-.sidenav {
-    background: red;
-    // width: 100px !important;
-    // height: 100px !important;
+//
+// Theme Media Queries
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+@media (min-width: 1200px) {
+  .sidenav {
+      width: (@gridColumnWidth1200 * 2 + @gridGutterWidth1200);
+    }
 }
-#sidenav {
-    position: relative;
+
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .sidenav {
+    width: (@gridColumnWidth768 * 2 + @gridGutterWidth768);
+  }
+  .sidenav.affix {
+    top: 50px;
+  }
 }
 
 @media (max-width: 767px) {
     .jumbotron {
-        padding: (@navbarHeight) 0;
+      padding: (@navbarHeight) 0;
     }
     .jumbotron.subhead {
-        padding-top: (@navbarHeight - 60);
+      padding-top: (@navbarHeight - 60);
     }
     .landmark {
-        img {max-width: 170px;};
-        .text-center;
+      img {max-width: 170px;};
+      .text-center;
     }
 }

@@ -1,7 +1,5 @@
-$(document).ready (function (){
-	$('#sidenav').affix();
+
+$('[data-spy="scroll"]').each(function () {
+  var $spy = $(this).scrollspy('refresh')
 });
-// $('body').scrollspy();
-// $('[data-spy="scroll"]').each(function () {
-//   var $spy = $(this).scrollspy('refresh')
-// });
+$('#sidenav').scrollspy();
