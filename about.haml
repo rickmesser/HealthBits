@@ -1,0 +1,110 @@
+!!!
+%html.no-js{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %title Health Bits - Information is Healthy
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %meta{:content => "HealthBits is hard at work developing their solution to combat the issues plaguing the U.S.", :name => "description"}/
+    %link{:href => "humans.txt", :rel => "author"}/
+    %link{:href => "_/css/main.css", :rel => "stylesheet"}/
+    %link{:href => "_/css/responsive.css", :rel => "stylesheet"}/
+    %script{:src => "http://use.typekit.net/wle1fvu.js", :type => "text/javascript"}
+    :javascript
+      try{Typekit.load();}catch(e){}
+    /[if lt IE 9]
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    %link{:href => "_/img/favicon.ico", :rel => "shortcut icon"}/
+    %link{:href => "_/img/apple-touch-icon-144x144-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "144x144"}/
+    %link{:href => "_/img/apple-touch-icon-114x114-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "114x114"}/
+    %link{:href => "_/img/apple-touch-icon-72x72-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "72x72"}/
+    %link{:href => "_/img/apple-touch-icon-57x57-precomposed.png", :rel => "apple-touch-icon-precomposed"}/
+    
+  %body{ "data-spy" => "scroll", "data-offset-top" => "200", "data-target" => "#sidenav"}
+    %header.navbar.navbar-fixed-top{:role => "banner"}
+      .navbar-inner
+        .container
+          %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.brand{:href => "index.html"} HealthBits
+          .nav-collapse.collapse
+            %ul.nav.pull-right
+              %li
+                %a{:href => "about.html"} About
+              %li
+                %a.icon-hb-facebook{"data-icon" => "", "data-tip" => "Facebook", :href => "https://www.facebook.com/HealthBits"}
+                  %span.visuallyhidden Facebook
+              %li
+                %a.icon-hb-twitter{"data-icon" => "", "data-tip" => "Twitter", :href => "https://twitter.com/hlthbts"}
+                  %span.visuallyhidden Twitter
+
+    .container.childpage
+      .row
+        .span2
+          %ul.hidden-phone.nav.sidenav#sidenav{"data-spy" => "affix", "data-offset-top" => "70"}
+            %li
+              %a{:href => "https://www.google.com/"} Article on HealthBits
+            %li
+              %a{:href => "http://www.healthcare.gov/"} Healthcare.gov
+        .span2
+          %aside.landmark
+            %img{:src => "_/img/lm-hb@2x.png"}/
+        .span8
+          %article
+            %h1 A little background on HealthBits
+            %p.lead Some lead-in text...
+            %p 
+
+              :markdown
+                Dillon Ipsum Julie Taylor, will you marry me? Clear Eyes. Full Hearts. Saracen, quarterback's a captain. CHAMPIONS DON'T COMPLAIN! Why don't you take your Members Only jacket off and hang it on the coat rack? Blood, sweat and tears - it all stays right here on this field, right now! This is our dirt! This is our mud! This is ours, baby! Everybody leaves me! What's wrong with me? **No matter what happens,** no matter where you go, no matter what you do, I'm gonna be right behind you. Always and always and always. There's a lot of dude talking going on out here. It's time for you to let Tim Riggins come home. 
+                > &quot;You're gonna be the star quarterback of the Dillon Panthers next year. And you are gonna shine.&quot;
+            %h2 Meet Cesar
+            %p 
+            :markdown
+              Lorem ipsum [Link](https://www.google.com/) sit amet, consectetur adipiscing elit. Etiam et magna lacus. Aliquam laoreet luctus porttitor. Donec eu velit eu velit sodales ornare sit amet in felis. 
+            %p Sed ut Clear Eyes, Full Hearts...ehh we'll deal with that later. I turned the contract down. It's your turn, I wanna go to Philadelphia. Will you take me to Philadelphia please? You changed my life Coach. Maybe one day our dreams will merge together. To Mr. and Mrs. Saracen, cheers! I know that you guys think that I'm young and that I'm making the wrong decision and I'm gonna drop out of college or whatever, but that's not me and you guys should know that. It's about getting to spend the rest of my life with my best friend. I want you to be on my side and trust me that I'm making the right decision.I would not talk about your job at the art gallery, that's not reassuring for a football coach.
+            %ul
+              %li Un-ordered list item 1
+              %li Un-ordered list item 2
+              %li Un-ordered list item 3
+              %li Un-ordered list item 4
+            %p At veto and remember you gotta win Friday night to make the playoffs. I guess we're fixin' to find out. Lemme tell you something. I'll tell you what. Tonight is your night. You have an opportunity to go out there and accept the challenge. You have the opportunity to be a part of the team. If anybody's internal, I'm internal. I'm not here to make friends. This ain't my home. This ain't my school. It never will be. Moby Dick is actually the perfect metaphor for this town. You need to learn this offense, son. If you look at a girl like a geometry proof the answer is right in front of you. It's your job to find the missing variable. You gotta solve for x. Yeah, um, that's actually algebra. That's actually not the point. Do you understand? My truck ain't running. I don't hate you, Lyla. It'd be a lot easier if I did. All right, listen up. You're a lousy ping-pong player. He's all bard and no bite. Oh, hell. Take a knee. Alright, y'all. Today we're champions. Feels good, right? Enjoy it while it lasts, 'cause tomorrow we're targets.
+            %ol
+              %li Ordered list item 1
+              %li Ordered list item 2
+              %li Ordered list item 3
+              %li Ordered list item 4
+            %p Dillon Ipsum I'll tell you something else and don't you ever forget this. I'm starting to feel like I have some sort of repellent that repels females away and sends them running. I don't want to step on your fingers or anything but you might want to slice those a little thinner because cucumber sandwiches are pretty delicate. Did I just lose a lot of man points for that? Crucifictorious. You can't fake boosterism, Eric, it comes from the heart. That's the beauty of it. Yeah, when we drive on the football field...we usually don't drive on our football field. Lyla, your dad's a sinner, I'm a weak man, but it was one mistake. He's one of those "I'll tell you something" guys, isn't he? Hey look, y'all keep tryin', but you ain't gonna catch me. Hey, don't hate, accelerate! Now, for as long as I know Tim Riggins, there's only two phrases that can put a smile on his face. Number 1: We're going to State. And Number 2: The results are in - you are not the father. Texas forever.
+
+    %footer.container.page-footer
+      %form.form-inline
+        %fieldset
+          .pull-right 
+            %small
+              :markdown
+                &copy; Copyright HealthBits, LLC 2013
+          %legend Get Updates.
+          %input.input-small{:type => "text", :placeholder => "Name"}/
+          %input.input-small{:type => "text", :placeholder => "Email"}/
+          %button.btn{:type => "submit"} Submit
+
+  
+
+    / javascript
+    %script{:src => "_/js/vendor/jquery-1.9.1.min.js"}
+    %script{:src => "_/js/plugins.js"}
+    %script{:src => "_/js/bootstrap-transition.js"}
+    %script{:src => "_/js/bootstrap-alert.js"}
+    %script{:src => "_/js/bootstrap-affix.js"}
+    %script{:src => "_/js/bootstrap-modal.js"}
+    %script{:src => "_/js/bootstrap-dropdown.js"}
+    %script{:src => "_/js/bootstrap-scrollspy.js"}
+    %script{:src => "_/js/bootstrap-tab.js"}
+    %script{:src => "_/js/bootstrap-tooltip.js"}
+    %script{:src => "_/js/bootstrap-popover.js"}
+    %script{:src => "_/js/bootstrap-button.js"}
+    %script{:src => "_/js/bootstrap-collapse.js"}
+    %script{:src => "_/js/bootstrap-carousel.js"}
+    %script{:src => "_/js/bootstrap-typeahead.js"}
+    %script{:src => "_/js/main.js"}

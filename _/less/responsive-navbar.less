@@ -16,10 +16,11 @@
   // Unfix the navbars
   .navbar-fixed-top,
   .navbar-fixed-bottom {
-    position: static;
+    position: relative;
+    z-index: 20;
   }
   .navbar-fixed-top {
-    margin-bottom: @baseLineHeight;
+    margin-bottom: 0;
   }
   .navbar-fixed-bottom {
     margin-top: @baseLineHeight;

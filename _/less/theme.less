@@ -58,6 +58,68 @@
     font-style: normal;
 }
 
+// Icon Fonts ~~~~~
+
+@font-face {
+  font-family: 'Icons';
+  src:url('../fonts/Icons.eot');
+  src:url('../fonts/Icons.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Icons.woff') format('woff'),
+    url('../fonts/Icons.ttf') format('truetype'),
+    url('../fonts/Icons.svg#Icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: 'Icons';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-hb-"] {
+*/
+.icon-hb-twitter, .icon-hb-envelope, .icon-hb-facebook {
+  font-family: 'Icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  // line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icon-hb-twitter:before {
+  content: "\e001";
+}
+.icon-hb-envelope:before {
+  content: "\e002";
+}
+.icon-hb-facebook:before {
+  content: "\e003";
+}
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+
 //
 // HTML Elements
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -71,6 +133,10 @@ article {
         font-family: @altFontFamily;
     }
 }
+strong {
+  color: darken(@brandGray, 50%);
+  font-family: "egizio_urwbold";
+}
 
 //
 // Theme Classes
@@ -81,7 +147,7 @@ article {
     text-align: center;
 }
 .jumbotron {
-    position: relative;
+    // position: relative;
     padding: (@navbarHeight * 2.5) 0 @navbarHeight;
 }
 .inverse {
@@ -101,7 +167,7 @@ img.splash {
 }
 img.hospital {max-width: 138px;}
 
-.jumbotron .container .row {
+.container > .row {
   background: url("@{imgPath}/Dots-Vert.png") no-repeat;
   background-position: (@gridColumnWidth * 3 + @gridGutterWidth * 3.15) (@gridColumnWidth * 3.2);
   background-size: 12px 441px;
@@ -116,9 +182,18 @@ img.hospital {max-width: 138px;}
   width: 116px;
   margin: 0 auto;
 }
+.intro {
+  background: url("@{imgPath}/intro-background@2x.png") repeat-x top center, @ltBlue;
+  background-size: 1410px 520px;
+  img.brand {
+    max-width: 502px;
+  }
+}
 .intro, .outro {
   position: relative;
   z-index: 50;
+}
+.outro {
   background: @ltBlue;
 }
 .sidenav {
@@ -144,6 +219,13 @@ img.hospital {max-width: 138px;}
   z-index: 10;
   // background: red;
 }
+.container.childpage {
+  margin: (@navbarHeight * 1.5) auto;
+}
+footer.container.page-footer {
+  margin: (@navbarHeight * 1.5) auto;
+}
+
 
 //
 // Theme Media Queries
@@ -153,7 +235,7 @@ img.hospital {max-width: 138px;}
   .sidenav {
       width: (@gridColumnWidth1200 * 2 + @gridGutterWidth1200);
     }
-  .jumbotron .container .row {
+  .container > .row {
     background-position: (@gridColumnWidth1200 * 3 + @gridGutterWidth1200 * 3.3) (@gridColumnWidth1200 * 3.2);
   }
 }
@@ -166,12 +248,14 @@ img.hospital {max-width: 138px;}
   .sidenav.affix {
     top: 50px;
   }
-  .jumbotron .container .row {
+  .container > .row {
     background-position: (@gridColumnWidth768 * 3 + @gridGutterWidth768 * 3.2) (@gridColumnWidth768 * 3.5);
   }
+  .intro {background: @ltBlue;}
 }
 
 @media (max-width: 767px) {
+  .intro {background: @ltBlue;}
   .jumbotron {
     padding: (@navbarHeight) 0;
   }
@@ -182,8 +266,24 @@ img.hospital {max-width: 138px;}
     img {max-width: 170px;};
     .text-center;
   }
-  .jumbotron .container .row {
+  .intro {
+    img.brand {
+      max-width: 80%;
+      margin: (@navbarHeight / 2) auto;
+  }
+}
+  .container > .row {
     background: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro {
+    img.brand {
+      max-width: 100%;
+      margin: (@navbarHeight / 4) auto;
+      h1 {font-size: (@baseFontSize * 1.25);}
+    }
   }
 }
 

@@ -18,8 +18,8 @@
     %link{:href => "_/img/apple-touch-icon-114x114-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "114x114"}/
     %link{:href => "_/img/apple-touch-icon-72x72-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "72x72"}/
     %link{:href => "_/img/apple-touch-icon-57x57-precomposed.png", :rel => "apple-touch-icon-precomposed"}/
-    
-  %body{ "data-offset" => "200", "data-spy" => "scroll", "data-target" => "#sidenav"}
+
+  %body{ "data-spy" => "scroll", "data-offset-top" => "200", "data-target" => "#sidenav"}
     %header.navbar.navbar-fixed-top{:role => "banner"}
       .navbar-inner
         .container
@@ -27,18 +27,21 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.brand{:href => "#"} HealthBits
+          %a.brand{:href => "index.html"} HealthBits
           .nav-collapse.collapse
             %ul.nav.pull-right
               %li
-                %a{:href => "#about"} About
+                %a{:href => "about.html"} About
               %li
-                %a{:href => "#FAQ"} FAQ
+                %a.icon-hb-facebook{"data-icon" => "", "data-tip" => "Facebook", :href => "https://www.facebook.com/HealthBits"}
+                  %span.visuallyhidden Facebook
               %li
-                %a{:href => "#contact"} Contact
+                %a.icon-hb-twitter{"data-icon" => "", "data-tip" => "Twitter", :href => "https://twitter.com/hlthbts"}
+                  %span.visuallyhidden Twitter
     .jumbotron.subhead.intro
       .container
         %article
+          %img.brand{:src => "_/img/logo-large@2x.png"}/
           %h1 
             Seemless data integration for connected 
             %br
@@ -54,7 +57,7 @@
       .container
         .row
           .span2
-            %ul.hidden-phone.nav.sidenav#sidenav{"data-spy" => "affix"}
+            %ul.hidden-phone.nav.sidenav#sidenav{"data-spy" => "affix", "data-offset-top" => "1000"}
               %li
                 %a{:href => "#landscape"} The Landscape
               %li
@@ -106,7 +109,9 @@
               %h1 It’s a problem affecting our lives.
               %p Even with all that we spend on healthcare, we as a country we rank lower than ever on in overall life expectancy.
               %figure.illustration
-                %img{:src => "_/img/illustration-lifespan@2x.png"}/
+                .row
+                  %img.span4{:src => "_/img/illustration-51st@2x.png"}/
+                  %img.span4{:src => "_/img/illustration-avg_age@2x.png"}/
       .lead-in
         Medical
         %br
@@ -123,11 +128,6 @@
               %p Each week there are 40 wrong site surgeries resulting in deaths and injuries caused by errors and oversights. Adding up to 187,000 deaths per year, medical mistakes are the third leading cause of death in the country.
               %figure.illustration
                 %img{:src => "_/img/illustration-errors@2x.png"}/
-              / %h2 Leading Causes of Death in the U.S.
-              / %ol
-              /   %li Heart disease: 597,689
-              /   %li Cancer: 574,743
-              /   %li Medical Errors: 187,000
 
       .lead-in
         An
@@ -161,6 +161,12 @@
             %input.input-small{:type => "text", :placeholder => "Name"}/
             %input.input-small{:type => "text", :placeholder => "Email"}/
             %button.btn{:type => "submit"} Submit
+     
+  %footer.container.page-footer
+    .pull-right
+      %small
+        :markdown
+          &copy; Copyright HealthBits, LLC 2013
 
     / javascript
     %script{:src => "_/js/vendor/jquery-1.9.1.min.js"}
