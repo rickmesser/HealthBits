@@ -13,6 +13,7 @@
       try{Typekit.load();}catch(e){}
     /[if lt IE 9]
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    %script{:src => "_/js/vendor/wufoo.js"}
     %link{:href => "_/img/favicon.ico", :rel => "shortcut icon"}/
     %link{:href => "_/img/apple-touch-icon-144x144-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "144x144"}/
     %link{:href => "_/img/apple-touch-icon-114x114-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "114x114"}/
@@ -155,33 +156,28 @@
         %figure.illustration
           %img.hospital{:src => "_/img/hospital@2x.png"}/
         %hr 
-        %form.form-inline
+
+        %form#form1.form-inline{:action => "https://healthbits.wufoo.com/forms/z7x3p3/#public", :autocomplete => "off", :enctype => "multipart/form-data", :method => "post", :name => "form1", :novalidate => ""}
           %fieldset
             %legend Get Updates.
-            %input.input-small{:type => "text", :placeholder => "Name"}/
-            %input.input-small{:type => "text", :placeholder => "Email"}/
-            %button.btn{:type => "submit"} Submit
+            %input#Field3.field.text.medium.input-small{:maxlength => "255", :name => "Field3", :onkeyup => "", :placeholder => "Name", :tabindex => "1", :type => "text"}/
+            %input#Field4.field.text.medium.input-small{:maxlength => "255", :name => "Field4", :placeholder => "Email", :required => "", :spellcheck => "false", :tabindex => "2", :type => "email"}/
+            %input#saveForm.btTxt.submit.btn{:name => "saveForm", :type => "submit", :value => "Submit"}/
+            .hide
+              %label{:for => "comment"} Do Not Fill This Out
+              %textarea#comment{:cols => "1", :name => "comment", :rows => "1"}
+              %input#idstamp{:name => "idstamp", :type => "hidden", :value => "EJrKES/8vSbf12K1ycRi+vJaFQQpRuONY30lZUOsPT0="}/
      
   %footer.container.page-footer
-    .pull-right
-      %small
-        :markdown
-          &copy; Copyright HealthBits, LLC 2013
+    %small.text-center
+      :markdown
+        &copy; Copyright HealthBits, LLC 2013
 
     / javascript
     %script{:src => "_/js/vendor/jquery-1.9.1.min.js"}
     %script{:src => "_/js/plugins.js"}
     %script{:src => "_/js/bootstrap-transition.js"}
-    %script{:src => "_/js/bootstrap-alert.js"}
     %script{:src => "_/js/bootstrap-affix.js"}
-    %script{:src => "_/js/bootstrap-modal.js"}
     %script{:src => "_/js/bootstrap-dropdown.js"}
     %script{:src => "_/js/bootstrap-scrollspy.js"}
-    %script{:src => "_/js/bootstrap-tab.js"}
-    %script{:src => "_/js/bootstrap-tooltip.js"}
-    %script{:src => "_/js/bootstrap-popover.js"}
-    %script{:src => "_/js/bootstrap-button.js"}
-    %script{:src => "_/js/bootstrap-collapse.js"}
-    %script{:src => "_/js/bootstrap-carousel.js"}
-    %script{:src => "_/js/bootstrap-typeahead.js"}
     %script{:src => "_/js/main.js"}
